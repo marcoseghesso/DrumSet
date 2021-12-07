@@ -13,34 +13,57 @@ h1 {
 
 .a {
   background-image: url(./images/crash.png);
+  background-repeat: no-repeat;
+  grid-area: c;
 }
 
 .s {
   background-image: url(./images/kick.png);
+  background-repeat: no-repeat;
+  grid-area: k;
 }
 
 .d{
   background-image: url(./images/snare.png);
+  background-repeat: no-repeat;
+  grid-area: s;
 }
 
 .f {
   background-image: url(./images/tom1.png);
+  background-repeat: no-repeat;
+  grid-area: t1;
 }
 
 .j {
   background-image: url(./images/tom2.png);
+  background-repeat: no-repeat;
+  grid-area: t2;
 }
 
 .k {
   background-image: url(./images/tom3.png);
+  background-repeat: no-repeat;
+  grid-area: t3;
 }
 
 .l {  
   background-image: url(./images/tom4.png);
+  background-repeat: no-repeat;
+  grid-area: t4;
 }
 
 .set {
-  margin: 10% auto;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "s t1 t2 t3"
+  "c k k t4"
+  ;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-over {
@@ -67,9 +90,6 @@ h1 {
   color: #DA0463;
   text-shadow: 3px 0 #DBEDF3;
   border-radius: 15px;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
   text-align: center;
   margin: 10px;
   background-color: white;
