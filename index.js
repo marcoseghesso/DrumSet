@@ -4,11 +4,13 @@ for (let i = 0; i < buttons.length; i++) {
    buttons[i].addEventListener("click", function () {
       let buttonInnerHTML = this.innerHTML;
       playSound(buttonInnerHTML);
+      playAnimation(buttonInnerHTML);
    })
 }
 
 document.addEventListener("keypress", function(event){
-   playSound(event.key)
+   playSound(event.key);
+   playAnimation(event.key);
 });
 
 function playSound (character){
@@ -45,4 +47,12 @@ function playSound (character){
       default:
          console.log(buttonInnerHTML)
    }
+}
+
+function playAnimation (character){
+   const currentButton = document.querySelector(`.${character}`);
+   currentButton.classList.add("pressed");
+   setTimeout(function(){
+      currentButton.classList.remove("pressed");
+   }, 100);
 }
