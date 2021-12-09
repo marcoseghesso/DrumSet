@@ -45,7 +45,7 @@ function playSound (character){
          tom4.play()
          break
       default:
-         console.log(buttonInnerHTML)
+         console.log(character)
    }
 }
 
